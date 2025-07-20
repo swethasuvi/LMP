@@ -58,6 +58,8 @@ background: #fff;
   justify-content: space-between;
   width: 100%;
   padding: 0 40px;
+  
+    align-items: flex-start;
 }
 /* Left: Logo */
 .nav-left .logo {
@@ -67,16 +69,21 @@ background: #fff;
 
 /* Center */
 .nav-center {
-  flex-grow: 1;
+  /* flex-grow: 1; */
   display: flex;
   justify-content: center;
+  flex-direction: column;
+    background-color: white;
+  border-bottom-left-radius: 12px;
+   border-bottom-right-radius: 12px;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.5rem;
   width:180px;
-  padding-top: 12px;
+  padding-top: 15px;
 }
 
 .logo span {
@@ -89,14 +96,12 @@ background: #fff;
   list-style: none;
   display: flex;
   gap: 20px;
-  background-color: white;
-  border-bottom-left-radius: 12px;
-   border-bottom-right-radius: 12px;
+
   padding: 30px 35px;
   display: flex;
   align-items: center;
   gap: 24px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
 }
 
 .nav-links li a {
@@ -115,12 +120,30 @@ background: #fff;
   display: flex;
   gap: 10px;
   align-items: center;
+  margin-top: 30px
 }
 
 .nav-right input {
   padding: 6px 10px;
   border-radius: 20px;
   border: 1px solid #ccc;
+}
+.dropdown-menu{
+  display: flex;
+  padding: 25px 100px;
+      gap: 40px;
+      display: none;
+}
+.dropdown-menu ul{
+  display: flex
+;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+.dropdown-menu a{
+  text-decoration: none;
+  color: #000
 }
 /* Search Container */
 .search-container {
@@ -378,7 +401,7 @@ display: flex;
 }
 
 .product-section {
-  padding: 80px 40px;
+  padding: 60px 40px;
   text-align: center;
   background-color: #fff;
 }
@@ -401,6 +424,7 @@ display: flex;
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 40px;
 }
 
 .product-card {
@@ -418,18 +442,20 @@ display: flex;
 .product-card img {
   width: 100%;
   height: 300px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .product-title{
    display: flex;
    justify-content: space-between;
     text-align: left;
+    width: 100%;
 }
 .product-card h3 {
   font-size: 1rem;
   margin-bottom: 5px;
   font-weight: 500;
-  width: 50%;
+  width: 75%;
+
 }
 
 .product-card p {
