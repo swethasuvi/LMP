@@ -46,32 +46,37 @@
           <li><a href="/about-us.html">About Us</a></li>
           <li><a href="/faq.html">FAQS</a></li>
           <li>
-            <div class="search-container">
-              <input type="text" placeholder="Search..." class="search-input" />
+<div class="search-container">
               <button class="search-icon">
-                <img src="assets/images/search-icon.png" alt="Search Icon" />
+    <img src="assets/images/search-icon.png" alt="Search Icon" />
               </button>
-            </div>
+              <input type="text" placeholder="Search for Products" class="search-input" />
+              
+  </div>
           </li>
         </ul>
         <ul class="dropdown-menu">
-           <ul>
-          <li><a href="#">Nattu sugar</a></li>
-          <li><a href="#">Karupatti</a></li>
-          <li><a href="#">Turmeric</a></li>
-          <li><a href="#">Deepam oil</a></li>
-           </ul>
-          <ul >
-          <li><a href="#">Dry fruits</a></li>
-          <li><a href="#">Coconut Oil</a></li>
-          <li><a href="#">Ghee</a></li>
-          <li><a href="#">Seeds</a></li>
+          <ul>
+            <li><a href="#">Nattu sugar</a></li>
+            <li><a href="#">Karupatti</a></li>
+            <li><a href="#turmeric">Turmeric</a></li>
+            <li><a href="#">Deepam oil</a></li>
+          </ul>
+          <ul>
+            <li><a href="#dry-fruits">Dry fruits</a></li>
+            <li><a href="#coconut-oil">Coconut Oil</a></li>
+            <li><a href="#ghee">Ghee</a></li>
+            <li><a href="#seeds">Seeds</a></li>
           </ul>
         </ul>
       </div>
       <div class="nav-right">
         <button class="contact-btn">Contact Us &nbsp;→</button>
       </div>
+    </div>
+    <!-- WhatsApp Icon -->
+    <div class="whatsapp-icon">
+      <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" />
     </div>
     <!-- Banner Section -->
     <div style="background-color: #fefce8">
@@ -94,11 +99,6 @@
           <!-- Farmer Image -->
           <div class="hero-farmer">
             <img src="assets/images/farmer.png" alt="Farmer with produce" />
-          </div>
-
-          <!-- WhatsApp Icon -->
-          <div class="whatsapp-icon">
-            <img src="assets/images/whatsapp-icon.png" alt="WhatsApp" />
           </div>
         </div>
       </section>
@@ -137,7 +137,7 @@
       </div>
     </section>
     <!-- Cereals & Pulses Section -->
-    <section class="product-section">
+    <section class="product-section" id="seeds">
       <h2>CEREALS & PULSES</h2>
       <p>
         From Soil To Store — All You Need In One Place. Seeds, Tools, And
@@ -265,7 +265,7 @@
       </div>
     </section>
     <!-- Dry Fruits Section -->
-    <section class="product-section">
+    <section class="product-section" id="dry-fruits">
       <h2>DRY FRUITS</h2>
       <p>
         From Soil To Store — All You Need In One Place. Seeds, Tools, And
@@ -530,7 +530,7 @@
 
       <div class="product-grid">
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" id="coconut-oil">
           <img src="assets/images/products/coconut-oil.png" alt="Coconut Oil" />
           <div class="product-card-content">
             <div class="product-title">
@@ -544,7 +544,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" id="ghee">
           <img src="assets/images/products/ghee.png" alt="Ghee" />
           <div class="product-card-content">
             <div class="product-title">
@@ -558,7 +558,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" id="turmeric">
           <img src="assets/images/products/turmeric.png" alt="Turmeric" />
           <div class="product-card-content">
             <div class="product-title">
@@ -659,7 +659,14 @@
         Harvest<br />
         Essentials Delivered Fast!
       </p>
-
+      <svg style="display: none;">
+        <symbol id="star-icon" viewBox="0 0 21 21" fill="none">
+          <path
+            d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
+            fill="#107634" />
+        </symbol>
+      </svg>
+      
       <div class="testimonial-slider" id="testimonialSlider">
         <div class="testimonial-card">
           <h3>Priya Patel</h3>
@@ -668,38 +675,13 @@
             mangoes. I used to be a hapus loyal before Imam Pasands converted
             me. And the delivery and customer service.
           </p>
-          <div class="stars">
-            <span class="star-container"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                viewBox="0 0 21 21" fill="none">
-                <path
-                  d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
-                  fill="#107634" />
-              </svg></span>
-            <span class="star-container"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                viewBox="0 0 21 21" fill="none">
-                <path
-                  d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
-                  fill="#107634" />
-              </svg></span>
-            <span class="star-container"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                viewBox="0 0 21 21" fill="none">
-                <path
-                  d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
-                  fill="#107634" />
-              </svg></span>
-            <span class="star-container"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                viewBox="0 0 21 21" fill="none">
-                <path
-                  d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
-                  fill="#107634" />
-              </svg></span>
-            <span class="star-container"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"
-                viewBox="0 0 21 21" fill="none">
-                <path
-                  d="M8.75229 1.94293C9.2251 0.487774 11.2838 0.487772 11.7566 1.94293L13.0835 6.02674C13.2949 6.67751 13.9014 7.11811 14.5856 7.11811H18.8796C20.4096 7.11811 21.0458 9.07601 19.808 9.97534L16.3341 12.4993C15.7805 12.9015 15.5489 13.6144 15.7603 14.2651L17.0872 18.349C17.56 19.8041 15.8945 21.0142 14.6567 20.1148L11.1828 17.5909C10.6292 17.1887 9.87963 17.1887 9.32606 17.5909L5.85216 20.1148C4.61433 21.0142 2.94884 19.8041 3.42165 18.349L4.74856 14.2651C4.96001 13.6144 4.72837 12.9015 4.17479 12.4993L0.700895 9.97534C-0.536934 9.07601 0.0992246 7.11811 1.62927 7.11811H5.92324C6.6075 7.11811 7.21393 6.67751 7.42538 6.02674L8.75229 1.94293Z"
-                  fill="#107634" />
-              </svg></span>
-          </div>
+        <div class="stars">
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+        </div>
         </div>
 
         <div class="testimonial-card">
@@ -708,7 +690,13 @@
             The bhindi was so fresh, it snapped like a dream. Reminded me of
             my grandmother’s kitchen garden. This is how vegetables should be.
           </p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+              <div class="stars">
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+        </div>
         </div>
 
         <div class="testimonial-card">
@@ -718,18 +706,40 @@
             packed with flavor — nothing like the store-bought ones. My salad
             game has leveled up!
           </p>
-          <div class="stars">⭐⭐⭐⭐⭐</div>
+                  <div class="stars">
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+        </div>
         </div>
 
         <div class="testimonial-card">
           <h3>Aarti</h3>
           <p>
-            I planted your spinach and within 10 days, I had a full patch
-            growing. No chemicals, no stress — just pure joy.
+            I tried your organic tomato seeds and was amazed — tiny green shoots appeared in just 7 days! They're growing beautifully, and I feel so proud knowing exactly what's in my food.
           </p>
-          <div class="stars">⭐⭐⭐⭐</div>
+                  <div class="stars">
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
         </div>
-
+        </div>
+ <div class="testimonial-card">
+          <h3>Naveen</h3>
+          <p>
+The guavas we received were incredible — crisp, sweet, and so juicy. Everyone at home loved them, and we’re definitely ordering again soon!          </p>
+                  <div class="stars">
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+          <span class="star-container"><svg width="16" height="16"><use href="#star-icon" /></svg></span>
+        </div>
+        </div>
         <!-- You can add more cards similarly -->
       </div>
     </section>

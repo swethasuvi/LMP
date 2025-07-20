@@ -76,7 +76,7 @@ background: #fff;
     background-color: white;
   border-bottom-left-radius: 12px;
    border-bottom-right-radius: 12px;
-       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 0 3.55px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
@@ -146,32 +146,77 @@ background: #fff;
   color: #000
 }
 /* Search Container */
+/* Base collapsed container */
 .search-container {
   display: flex;
   align-items: center;
-  position: relative;
-  transition: width 0.3s ease;
-  background-color: white;
-}
-.search-input {
-  width: 0;
+  width: 40px; /* collapsed state */
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 40px;
   border: none;
-  outline: none;
-  transition: width 0.4s ease;
-  opacity: 0;
-  font-size: 14px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
 }
 
-.search-container:focus-within .search-input {
-  width: 120px;
-  opacity: 1;
-}
+/* Search icon */
 .search-icon {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+      background-color: unset;
+    border: none;
+
 }
+
+.search-icon img {
+  width: 100%;
+  height: auto;
+}
+
+/* Input starts hidden */
+.search-input {
+  width: 0;
+  opacity: 0;
+  border: none;
+  outline: none;
+  padding: 10px 0px;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+/* On focus - expand */
+.search-container:focus-within {
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  padding: 20px 20px;
+  border: 1px solid #cce5cc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Reveal input on focus */
+.search-container:focus-within .search-input {
+  width: 150px;
+  opacity: 1;
+  padding-left: 10px;
+}
+
+/* Placeholder style */
+.search-input::placeholder {
+  color: #888;
+  font-weight: 400;
+}
+
+
 .contact-btn {
   background-color: #107634;
   color: white;
@@ -333,10 +378,11 @@ background: #fff;
 }
 
 .whatsapp-icon {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 50px;
+  width: 80px;
+  z-index: 1000;
 }
 
 .whatsapp-icon img {
@@ -534,10 +580,10 @@ display: flex;
 .testimonial-slider {
   display: flex;
   gap: 20px;
-  overflow: hidden;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  animation: scrollTestimonial 30s linear infinite;
   padding-bottom: 20px;
+  scrollbar-width: none; /* Firefox */
 }
 
 .testimonial-card {
@@ -552,29 +598,39 @@ display: flex;
   transition: transform 0.3s ease;
 }
 
-.testimonial-card:hover {
+/* .testimonial-card:hover {
   transform: scale(1.05);
-}
+} */
 
 .testimonial-card h3 {
-  font-size: 18px;
+  font-size: 30px;
   margin-bottom: 10px;
+  margin-top:20px;
+  font-weight: 400;
 }
 
 .testimonial-card p {
   font-size: 14px;
-  color: #333;
-  margin-bottom: 10px;
+  color: #222222;
+  margin-bottom: 20px;
+  min-height:90px;
 }
 
 .stars {
-  font-size: 18px;
-  color: #36aa51;
+  display: flex;
+      justify-content: center;
+  gap: 8px; /* spacing between stars */
+  margin-top: 8px;
 }
 
 .star-container {
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* makes it a circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* soft shadow */
 }
 /* Auto-scroll animation */
 @keyframes scrollTestimonial {
@@ -736,7 +792,7 @@ margin-bottom: 15px;
 /* About us section */
 
 .about-us-section {
-  background-color: #fffbe9;
+  background-color: #fff;
   padding: 60px 20px;
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -758,8 +814,7 @@ margin-bottom: 15px;
 }
 
 .about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
   gap: 30px;
   max-width: 1200px;
   margin: auto;
@@ -794,17 +849,15 @@ margin-bottom: 15px;
 .about-flex {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+   align-items: flex-start; gap: 20px;
 }
 
 .about-flex img {
-  max-width: 100px;
   flex-shrink: 0;
 }
 
 .about-card.small {
-  text-align: center;
+  text-align: left;
 }
 
 /* FAQ Section CSS */
