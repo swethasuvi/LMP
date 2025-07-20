@@ -8,9 +8,9 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <!-- Banner Section -->
-    <section class="hero-banner">
-      <div class="navbar">
+    <div class="parent-container">
+          <div class="navbar">
+        <div class="nav-left">    
         <div class="logo">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,18 +45,29 @@
             />
           </svg>
         </div>
+        </div>
+        <div class="nav-center">
         <ul class="nav-links">
           <li><a href="/">Home</a></li>
           <li><a href="#">All categories</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="/about-us.html">About Us</a></li>
-          <li><a href="/faq.html">FAQs</a></li>
+          <li><a href="/faq.html">FAQS</a></li>
         </ul>
+                <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-input" />
+          <button class="search-icon">
+            <img src="assets/images/search-icon.png" alt="Search Icon" />
+          </button>
+        </div>
+        </div>
         <div class="nav-right">
-          <input type="text" placeholder="Search..." />
-          <button class="contact-btn">Contact Us</button>
+          <button class="contact-btn">Contact Us </button>
         </div>
       </div>
+    <!-- Banner Section -->
+    <section class="hero-banner">
+
 
       <div class="hero-content">
         <h1>Pure Agriculture<br /><span>Products</span> 🌱</h1>
@@ -517,5 +528,6 @@
         <p>© Copyright 2024. All rights reserved by LMP</p>
       </div>
     </footer>
+    </div>
   </body>
 </html>
