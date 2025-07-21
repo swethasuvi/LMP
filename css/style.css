@@ -231,6 +231,7 @@ background: #fff;
   text-decoration: none;
   transition: background-color 0.3s ease;
   width: 180px;
+  text-align: center;
 }
 .contact-btn:hover {
   background-color: #005c2e;
@@ -528,16 +529,51 @@ display: flex;
   width: 100%;
 }
 
-.product-card button:hover {
+/* .product-card button:hover {
   background: #1e8449;
   color: white;
-}
+} */
 .product-card-content{
     display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding:10px 12px;
 }
+/* Review paragraph initially hidden */
+.product-review {
+  display: none;
+  font-size: 12px;
+  color: #666;
+}
+
+/* Show on hover */
+.product-card:hover .product-review {
+  display: block;
+}
+
+/* Change button on hover */
+.product-card:hover button {
+  background-color: #107634;
+  color: #fff;
+  border: none;
+}
+
+/* Optional: change button text on hover */
+.product-card:hover button::before {
+  content: "Contact Us";
+  text-align: center;
+}
+.product-card:hover button::after {
+  content: "";
+}
+.product-card:hover button {
+  position: relative;
+  color: white;
+}
+.product-card:hover button span {
+  display: none;
+}
+
 .view-all-container {
   text-align: center;
   margin-top: 40px;
