@@ -222,7 +222,7 @@ background: #fff;
   color: white;
   border: none;
   border-radius: 20px;
-  padding: 16px 16px;
+  padding: 20px 16px !important;
   cursor: pointer;
   background-color: #007a3d;
   color: white;
@@ -230,8 +230,10 @@ background: #fff;
   border-radius: 12px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  width: 180px;
+  width: 180px !important;
+  max-width: unset !important;
   text-align: center;
+  padding-left: 35px !important;
 }
 .contact-btn:hover {
   background-color: #005c2e;
@@ -359,12 +361,42 @@ background: #fff;
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  transition: background 0.3s ease;
+  max-width: 155px;
+  width: 100%;
+  transition: background 0.3s ease, color 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.shop-btn .icon {
+  display: inline-flex;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  position: absolute;
+  right: 28px; /* Adjust as needed */
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+}
+
+.shop-btn .hover-icon {
+  opacity: 0;
+  transform: translateY(-50%) translateX(20px);
 }
 
 .shop-btn:hover {
-  background-color: #1e8449;
+  background-color: #FFEA19;
+  color: #242424;
 }
+
+.shop-btn:hover .default-icon {
+  opacity: 0;
+  transform: translateY(-50%) translateX(-20px);
+}
+
+.shop-btn:hover .hover-icon {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
 
 .hero-farmer {
   position: absolute;
@@ -387,6 +419,19 @@ background: #fff;
 }
 
 .whatsapp-icon img {
+  width: 100%;
+  height: auto;
+}
+
+.logo-background {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 480px;
+  z-index: 1000;
+}
+
+.logo-background img {
   width: 100%;
   height: auto;
 }
@@ -511,7 +556,6 @@ display: flex;
 }
 
 .product-card .price {
-  font-weight: bold;
   font-size: 1.1rem;
   margin: 10px 0;
   color: #222;
@@ -588,10 +632,11 @@ display: flex;
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  max-width: 230px;
 }
 
 .view-all-btn:hover {
-  background-color: #156437;
+  background-color: #FFEA19;
 }
 
 /* Testimonial Section */
@@ -731,7 +776,8 @@ display: flex;
 }
 
 .connect-form button:hover {
-  background-color: #3d9145;
+  background-color: #FFEA19;
+  color: #242424;
 }
 /* Footer */
 .footer {
