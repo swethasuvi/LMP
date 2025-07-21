@@ -130,7 +130,7 @@ background: #fff;
 }
 .dropdown-menu{
   display: flex;
-  padding: 25px 100px;
+      padding: 0px 100px 30px;
       gap: 40px;
       display: none;
 }
@@ -437,7 +437,7 @@ background: #fff;
 }
 
 .features {
-  background-color: #fefce8;
+  background-color: #F6F4DC;
   display: flex;
   justify-content: center;
   gap: 30px;
