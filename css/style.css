@@ -76,7 +76,7 @@ background: #fff;
     background-color: white;
   border-bottom-left-radius: 12px;
    border-bottom-right-radius: 12px;
-   box-shadow: 0 0 3.55px rgba(0, 0, 0, 0.05);
+   box-shadow: 0 0 3.55px rgba(0, 0, 0, 0.25);
 }
 
 .logo {
@@ -141,10 +141,31 @@ background: #fff;
     gap: 10px;
     list-style: none;
 }
-.dropdown-menu a{
+.dropdown-menu a {
+  position: relative;
   text-decoration: none;
-  color: #000
+  color: #000; /* optional */
+  display: inline-block;
+  padding-bottom: 2px; /* space for the underline */
 }
+
+.dropdown-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #242424; /* same as text color */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-menu a:hover::after {
+  transform: scaleX(1);
+}
+
 /* Search Container */
 /* Base collapsed container */
 .search-container {

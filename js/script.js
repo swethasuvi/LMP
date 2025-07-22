@@ -47,19 +47,19 @@ headers.forEach((header) => {
 
     let isMenuOpen = false;
 
-    // Show on hover
-    dropdownTrigger.addEventListener("mouseenter", () => {
-      dropdownMenu.style.display = "flex";
-      isMenuOpen = true;
-    });
+    // // Show on hover
+    // dropdownTrigger.addEventListener("mouseenter", () => {
+    //   dropdownMenu.style.display = "flex";
+    //   isMenuOpen = true;
+    // });
 
-    dropdownTrigger.addEventListener("mouseleave", () => {
-      setTimeout(() => {
-        if (!isMenuOpen) {
-          dropdownMenu.style.display = "none";
-        }
-      }, 200);
-    });
+    // dropdownTrigger.addEventListener("mouseleave", () => {
+    //   setTimeout(() => {
+    //     if (!isMenuOpen) {
+    //       dropdownMenu.style.display = "none";
+    //     }
+    //   }, 200);
+    // });
 
     // Show on click
     dropdownTrigger.addEventListener("click", (e) => {
