@@ -198,6 +198,7 @@ background: #fff;
 .search-icon img {
   width: 100%;
   height: auto;
+  cursor: pointer;
 }
 
 /* Input starts hidden */
@@ -213,19 +214,73 @@ background: #fff;
   transition: all 0.4s ease;
   z-index: 1;
 }
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  color: #000;
+}
+
+.placeholder-anim {
+  position: absolute;
+  left: 100px;
+  top: 10px;
+  height: 20px; /* height of one line */
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+  color: #666666;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.placeholder-track {
+  display: flex;
+  flex-direction: column;
+  animation: smoothScroll 12s linear infinite;
+}
+
+.placeholder-track span {
+  height: 30px;
+  line-height: 20px;
+}
+
+
+.search-input:focus + .placeholder-anim {
+  display: none;
+}
+
+@keyframes smoothScroll {
+  0%   { transform: translateY(0); }
+  16.6% { transform: translateY(-20px); }
+  33.2% { transform: translateY(-40px); }
+  49.8% { transform: translateY(-60px); }
+  66.4% { transform: translateY(-80px); }
+  83%  { transform: translateY(-100px); }
+  100% { transform: translateY(-120px); } /* this is the duplicate first one */
+}
+
 
 /* On focus - expand */
-.search-container:focus-within {
-  width: 100%;
-  max-width: 500px;
+.search-container {
+  min-width: 450px;
   background-color: white;
-  padding: 20px 20px;
-  border: 1px solid #cce5cc;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 25px 20px;
+  margin: 30px 30px;
+  border: 2px solid #cce5cc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 /* Reveal input on focus */
-.search-container:focus-within .search-input {
+.search-container .search-input {
   width: 150px;
   opacity: 1;
   padding-left: 10px;

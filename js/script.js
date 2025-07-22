@@ -77,4 +77,67 @@ headers.forEach((header) => {
     });
   });
 
+  // search container visibility
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const searchIcons = document.querySelectorAll(".search-icon");
+    const navLinks = document.querySelector(".nav-links");
+    const searchContainer = document.querySelector(".search-container");
+
+    // Show search container on icon click
+    searchIcons.forEach(icon => {
+      icon.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent triggering document click
+        navLinks.style.display = "none";
+        searchContainer.style.display = "flex"; // or block, depending on your layout
+      });
+    });
+
+    // Hide search container when clicking outside of it
+    document.addEventListener("click", function (event) {
+      const isClickInside = searchContainer.contains(event.target);
+
+      if (!isClickInside) {
+        searchContainer.style.display = "none";
+        navLinks.style.display = "flex"; // or block
+      }
+    });
+  });
+
+  // search input change starts
+//   document.addEventListener("DOMContentLoaded", function () {
+//     const searchInput = document.querySelector(".search-input");
+
+//     const placeholderTexts = [
+//       "Search for Products",
+//       "Search for Turmeric",
+//       "Search for Ghee",
+//       "Search for Dry Fruits",
+//       "Search for Coconut Oil"
+//     ];
+
+//     let index = 0;
+
+//     setInterval(() => {
+//       searchInput.setAttribute("placeholder", placeholderTexts[index]);
+//       index = (index + 1) % placeholderTexts.length;
+//     }, 2000); // change every 2 seconds
+//   });
+//   setInterval(() => {
+//   searchInput.style.opacity = 0;
+
+//   setTimeout(() => {
+//     searchInput.setAttribute("placeholder", placeholderTexts[index]);
+//     searchInput.style.opacity = 1;
+//     index = (index + 1) % placeholderTexts.length;
+//   }, 300); // match CSS transition time
+// }, 2000);
+
+  // search input change ends
+
+
+
+
+
 
