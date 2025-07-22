@@ -113,9 +113,9 @@ background: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
-.nav-links li a:hover {
+/* .nav-links li a:hover {
   color: #007a3d;
-}
+} */
 .nav-right {
   display: flex;
   gap: 10px;
@@ -238,44 +238,34 @@ background: #fff;
 .contact-btn:hover {
   background-color: #005c2e;
 }
-
-.static-wavy-underline{
+.wavy-underline{
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: #242424; /* Customize color */
 }
-.wavy-underline {
-      position: relative;
-      display: inline-block;
-      font-family: sans-serif;
-      cursor: pointer;
+.nav-links li:not(:last-child) {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #242424;
+  text-decoration: none; /* Remove default underline */
 }
-    .wavy-underline::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 5px;
-      background: repeating-linear-gradient(
-        to right,
-        transparent 0px,
-        transparent 3px,
-        #444 3px,
-        #444 9px
-      );
-      background-size: 16px 5px;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-      border-radius: 2px;
-      mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='5'><path d='M0,3 Q2.5,0 5,3 T10,3 T15,3 T20,3 T25,3 T30,3 T35,3 T40,3 T45,3 T50,3 T55,3 T60,3 T65,3 T70,3 T75,3 T80,3 T85,3 T90,3 T95,3 T100,3' fill='black'/></svg>");
-      mask-size: 100% 100%;
-      mask-repeat: no-repeat;
-    }
-    .wavy-underline:hover::after {
-      transform: scaleX(1);
-    }
+.nav-links li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px; /* adjust based on font size */
+  height: 6px;
+  width: 0%;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='85' height='10' viewBox='0 0 85 10' fill='none'><path d='M1.98193 4.4749V4.4749C6.34952 1.27042 12.2997 1.30171 16.6333 4.55194L17.3362 5.07911C22.077 8.63466 28.5955 8.63466 33.3362 5.0791V5.0791C38.0769 1.52355 44.611 1.53517 49.3517 5.09072V5.09072C54.0741 8.63253 60.5829 8.64411 65.3053 5.1023V5.1023C70.0569 1.53854 76.5971 1.56284 81.3221 5.16181L82.9966 6.43721' stroke='%23242424' stroke-opacity='0.8' stroke-width='3' stroke-linecap='round'/></svg>") repeat-x;
+    background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  transition: width 0.4s ease;
+}
+.nav-links li:not(:last-child):hover::after {
+  width: 100%;
+}
 @media (max-width: 900px) {
   .nav-menu {
     flex-wrap: wrap;
