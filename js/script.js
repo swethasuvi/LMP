@@ -27,7 +27,7 @@ headers.forEach((header) => {
   });
 
   // Scroll horizontally in a loop
-  let scrollSpeed = 0.5; // Adjust for speed
+  let scrollSpeed = 2; // Adjust for speed
   function autoScroll() {
     slider.scrollLeft += scrollSpeed;
     // If at end, reset to start
