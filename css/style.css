@@ -1057,9 +1057,9 @@ margin-bottom: 15px;
 
 .accordion-item {
   background: #fefefe;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-bottom: 15px;
-  border-radius: 8px;
+  border-radius: 30px;
   overflow: hidden;
 }
 
@@ -1077,13 +1077,17 @@ margin-bottom: 15px;
 }
 
 .accordion-header::after {
-  content: "\25BC";
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M11.7643 6.0332L7.41768 1.68654C6.90435 1.1732 6.06435 1.1732 5.55101 1.68654L1.20435 6.0332' stroke='%23107634' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   font-size: 14px;
   position: absolute;
   right: 20px;
-  top: 18px;
-  transition: transform 0.3s ease;
+  top: 21%;
+  transition: transform 0.1s ease;
+      padding: 7px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 
 .accordion-header.active::after {
   transform: rotate(180deg);
