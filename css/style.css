@@ -112,6 +112,7 @@ background: #fff;
   color: #333;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size:18px;
 }
 /* .nav-links li a:hover {
   color: #007a3d;
@@ -404,7 +405,7 @@ background: #fff;
     animation: zoomInOut 3s ease-in-out infinite;
 }
 .hero-content h1 {
-  font-size: 4rem;
+  font-size: 80px;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -416,7 +417,7 @@ background: #fff;
 }
 
 .hero-content p {
-  font-size: 1rem;
+  font-size: 20px;
   color: #eaeaea;
   margin-bottom: 30px;
     text-align: center;
@@ -428,7 +429,7 @@ background: #fff;
   padding: 14px 30px;
   border-radius: 30px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 20px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -438,12 +439,19 @@ background: #fff;
   overflow: hidden;
   position: relative;
 }
-
+.hero-content .shop-btn{
+  font-size: 25px;
+  max-width: 188px;
+}
+.hero-content .shop-btn{
+  font-size: 25px;
+  max-width: 188px;
+}
 .shop-btn .icon {
   display: inline-flex;
   transition: opacity 0.3s ease, transform 0.3s ease;
   position: absolute;
-  right: 28px; /* Adjust as needed */
+     right: 18px; /* Adjust as needed */
   top: 50%;
   transform: translateY(-50%) translateX(0);
 }
@@ -570,13 +578,13 @@ display: flex;
 }
 
 .product-section h2 {
-  font-size: 2rem;
+  font-size: 40px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .product-section p {
-  font-size: 1rem;
+  font-size: 20px;
   color: #555;
   /* margin-bottom: 40px; */
 }
@@ -614,7 +622,7 @@ display: flex;
     width: 100%;
 }
 .product-card h3 {
-  font-size: 1rem;
+  font-size: 18px;
   margin-bottom: 5px;
   font-weight: 500;
   width: 75%;
@@ -622,12 +630,12 @@ display: flex;
 }
 
 .product-card p {
-  font-size: 10px;
+  font-size: 13px;
   color: #666;
 }
 
 .product-card .price {
-  font-size: 1.1rem;
+  font-size: 18px;
   margin: 10px 0;
   color: #222;
 }
@@ -638,7 +646,7 @@ display: flex;
   border: 1px solid #107634;
   padding: 8px 20px;
   border-radius: 3px;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
@@ -700,11 +708,11 @@ display: flex;
   background-color: #107634;
   color: white;
   padding: 12px 28px;
-  font-size: 1rem;
+  font-size: 20px;
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
-  max-width: 230px;
+  max-width: 250px;
 }
 
 .view-all-btn:hover {
@@ -719,12 +727,12 @@ display: flex;
 }
 
 .testimonial-section h2 {
-  font-size: 28px;
+  font-size: 40px;
   margin-bottom: 10px;
 }
 
 .testimonial-section p {
-  font-size: 14px;
+  font-size: 20px;
   color: #555;
 }
 /* Horizontal Scrolling Slider */
@@ -766,14 +774,14 @@ display: flex;
 }
 
 .testimonial-card h3 {
-  font-size: 30px;
+  font-size: 35px;
   margin-bottom: 10px;
   margin-top:20px;
   font-weight: 400;
 }
 
 .testimonial-card p {
-  font-size: 14px;
+  font-size: 16px;
   color: #222222;
   min-height:90px;
 }
@@ -839,11 +847,11 @@ display: flex;
 
 .connect-form input[type="email"] {
   padding: 12px 18px;
-  font-size: 14px;
+  font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 30px;
   outline: none;
-  width: 250px;
+  width: 340px;
   max-width: 90%;
   transition: border-color 0.3s ease;
 }
@@ -859,7 +867,7 @@ display: flex;
   padding: 12px 20px;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 18px;
   transition: background-color 0.3s ease;
 }
 
@@ -908,13 +916,14 @@ display: flex;
 }
 
 .footer-column h4 {
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 28px;
 }
 
 .footer-column p,
 .footer-column ul {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.6;
 }
 
@@ -982,13 +991,13 @@ margin-bottom: 15px;
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .section-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   color: #444;
   margin-bottom: 40px;
   max-width: 700px;
@@ -1053,13 +1062,13 @@ margin-bottom: 15px;
 }
 
 .section-title {
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .section-subtitle {
-  font-size: 16px;
+  font-size: 20px;
   color: #444;
   margin-bottom: 40px;
   max-width: 700px;
