@@ -490,11 +490,11 @@ background: #fff;
 }
 
 .logo-background {
-  position: fixed;
-  top: 0px;
+position: fixed;
+  top: 0;
   left: 0px;
   width: 480px;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .logo-background img {
@@ -627,7 +627,7 @@ display: flex;
   color: #222;
 }
 
-.product-card button {
+.product-card a {
   background: white;
   color: #242424;
   border: 1px solid #107634;
@@ -637,6 +637,7 @@ display: flex;
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  text-decoration: none;
 }
 
 /* .product-card button:hover {
@@ -662,25 +663,25 @@ display: flex;
 }
 
 /* Change button on hover */
-.product-card:hover button {
+.product-card:hover a {
   background-color: #107634;
   color: #fff;
   border: none;
 }
 
 /* Optional: change button text on hover */
-.product-card:hover button::before {
+.product-card:hover a::before {
   content: "Contact Us";
   text-align: center;
 }
-.product-card:hover button::after {
+.product-card:hover a::after {
   content: "";
 }
-.product-card:hover button {
+.product-card:hover a {
   position: relative;
   color: white;
 }
-.product-card:hover button span {
+.product-card:hover a span {
   display: none;
 }
 

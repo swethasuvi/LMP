@@ -137,7 +137,24 @@ headers.forEach((header) => {
   // search input change ends
 
 
+// sticky behaviour starts
+
+const logo = document.querySelector('.logo-background');
+const container = document.querySelector('[style*="background-color: #F6F4DC"]');
+
+window.addEventListener('scroll', () => {
+  const rect = container.getBoundingClientRect();
+//  alert(rect.bottom)
+  if (rect.top <= 0 && rect.bottom > 60) {
+    logo.style.position = 'fixed';
+    logo.style.top = '0';
+  } else {
+    logo.style.position = 'absolute';
+    logo.style.top = 'initial';
+  }
+});
 
 
+// sticky behaviour ends
 
 
