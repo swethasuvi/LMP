@@ -7,6 +7,8 @@
   <title>About Us | LMP Natural Products</title>
   <link rel="stylesheet" href="/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="./js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -42,12 +44,9 @@
           <li class="static-wavy-underline"><a href="/about-us.html">About Us</a></li>
           <li><a href="/faq.html">FAQS</a></li>
           <li>
-            <div class="search-container">
-              <input type="text" placeholder="Search..." class="search-input" />
-              <button class="search-icon">
-                <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
-              </button>
-            </div>
+            <button class="search-icon">
+              <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
+            </button>
           </li>
         </ul>
         <ul class="dropdown-menu">
@@ -64,6 +63,25 @@
             <li><a href="#seeds">Seeds</a></li>
           </ul>
         </ul>
+            <div class="search-container" style="display: none;">
+          <button class="search-icon">
+            <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
+          </button>
+          <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search for " />
+            <div class="placeholder-anim">
+              <div class="placeholder-track">
+                <span> Products</span>
+                <span> Turmeric</span>
+                <span> Ghee</span>
+                <span> Dry Fruits</span>
+                <span> Coconut Oil</span>
+                <span> Products</span> <!-- Duplicate of first for seamless scroll -->
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
       <div class="nav-right">
                 <a href="tel:9962116570" class="shop-btn contact-btn">

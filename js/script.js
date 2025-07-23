@@ -105,37 +105,6 @@ headers.forEach((header) => {
     });
   });
 
-  // search input change starts
-//   document.addEventListener("DOMContentLoaded", function () {
-//     const searchInput = document.querySelector(".search-input");
-
-//     const placeholderTexts = [
-//       "Search for Products",
-//       "Search for Turmeric",
-//       "Search for Ghee",
-//       "Search for Dry Fruits",
-//       "Search for Coconut Oil"
-//     ];
-
-//     let index = 0;
-
-//     setInterval(() => {
-//       searchInput.setAttribute("placeholder", placeholderTexts[index]);
-//       index = (index + 1) % placeholderTexts.length;
-//     }, 2000); // change every 2 seconds
-//   });
-//   setInterval(() => {
-//   searchInput.style.opacity = 0;
-
-//   setTimeout(() => {
-//     searchInput.setAttribute("placeholder", placeholderTexts[index]);
-//     searchInput.style.opacity = 1;
-//     index = (index + 1) % placeholderTexts.length;
-//   }, 300); // match CSS transition time
-// }, 2000);
-
-  // search input change ends
-
 
 // sticky behaviour starts
 
