@@ -248,7 +248,7 @@ background: #fff;
 .placeholder-track {
   display: flex;
   flex-direction: column;
-  animation: smoothScroll 12s linear infinite;
+  animation: smoothScroll 5s linear infinite;
 }
 
 .placeholder-track span {
@@ -444,10 +444,8 @@ background: #fff;
 .hero-content .shop-btn{
   font-size: 25px;
   max-width: 188px;
-}
-.hero-content .shop-btn{
-  font-size: 25px;
-  max-width: 188px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .shop-btn .icon {
   display: inline-flex;
@@ -622,6 +620,7 @@ display: flex;
    justify-content: space-between;
     text-align: left;
     width: 100%;
+    min-height:50px
 }
 .product-card h3 {
   font-size: 18px;
@@ -894,7 +893,7 @@ display: flex;
 .footer {
   background-color: #fcf5c7;
   color: #1a1a1a;
-  padding: 60px 20px 20px;
+  padding: 60px 40px 20px 60px;
   font-family: "Poppins", sans-serif;
 }
 
