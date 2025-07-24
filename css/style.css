@@ -1236,6 +1236,7 @@ margin-bottom: 15px;
    }
    .hero-farmer img{
         max-width: 360px;
+                margin-bottom: -10px;
    }
    .hero-banner{
     padding-bottom: 0px
