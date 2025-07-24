@@ -127,3 +127,29 @@ window.addEventListener('scroll', () => {
 // sticky behaviour ends
 
 
+// Show popup menu
+document.getElementById("ham-burger").onclick = function () {
+  document.getElementById("popup-menu").classList.remove("hidden");
+};
+
+// Close popup
+document.getElementById("close-popup").onclick = function () {
+  document.getElementById("popup-menu").classList.add("hidden");
+};
+
+// Toggle All Categories submenu
+document.getElementById("all-categories-toggle").onclick = function () {
+  const submenu = document.getElementById("category-submenu");
+  const arrow = document.getElementById("category-arrow");
+
+  submenu.classList.toggle("hidden");
+
+  // Change arrow direction
+  if (submenu.classList.contains("hidden")) {
+    arrow.innerHTML = "▲";
+  } else {
+    arrow.textContent = "▼";
+  }
+};
+
+// popup code ends

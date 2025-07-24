@@ -11,7 +11,9 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 400; /* Normal text */
 }
-
+.hidden {
+  display: none;
+}
 .hero-banner {
   background: url("../assets/images/banner.png") no-repeat center center/cover;
   height: 100vh;
@@ -1130,4 +1132,137 @@ margin-bottom: 15px;
 
 .accordion-body.open {
   display: block;
+}
+.nav-mobile{
+  display: none;
+}
+@media (max-width: 550px) {
+   .hero-content h1{
+     font-size: 40px;
+   }
+   .hero-content p{
+    font-size: 16px;
+   }
+
+   /* Initial hidden state */
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 100%;
+  background-color: #111;
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  float: right;
+}
+
+.popup ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup li {
+  margin: 15px 0;
+  
+  cursor: pointer;
+          display: flex
+;
+        align-items: center;
+}
+
+.submenu {
+  padding-left: 15px;
+  margin-top: 10px;
+  color: #f3c623;
+}
+
+#category-arrow {
+  font-size: 10px;
+  padding-left: 10px;
+}
+.popup .shop-btn{
+      margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 60px;
+    max-width: unset;
+}
+
+
+
+
+
+   .nav-center{
+    display: none;
+   }
+   .nav-left svg{
+        width: 105px;
+    height: 54px;
+   }
+   .navbar{
+    padding : 0px 20px;
+   }
+   .nav-mobile{
+    margin-top: 18px;
+    display: flex
+;
+    align-items: center;
+    gap: 30px;
+   }
+   .logo-background{
+    width: 325px;
+   }
+   .hero-overlay{
+    padding:12px;
+     padding-bottom: 0px;
+        flex-direction: column;
+   }
+   .hero-farmer{
+    position: static;
+    width: 100%;
+   }
+   .hero-farmer img{
+        max-width: 360px;
+   }
+   .hero-banner{
+    padding-bottom: 0px
+   }
+   .hero-content img{
+        width: 40px;
+    height: 37px;
+   }
+   .features{
+   flex-direction: column;
+   }
+   .feature-box{
+      width: 325px;
+      margin: 0 auto;
+   }
+   .connect-section h2{
+    font-size: 28px;
+   }
+      .connect-section h2 img{
+        width: 40px;
+    height: 37px;
+      }
+      .footer-column:first-child{
+            display: flex
+;
+    flex-direction: column;
+    align-items: center;
+      }
+
 }
