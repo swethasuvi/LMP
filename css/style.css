@@ -12,7 +12,7 @@ body {
   font-weight: 400; /* Normal text */
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 .hero-banner {
   background: url("../assets/images/banner.png") no-repeat center center/cover;
@@ -185,6 +185,11 @@ background: #fff;
   position: relative;
 }
 
+#search-container-mobile{
+   min-width: unset;
+   width:100%;
+   margin: 30px 0px;
+}
 /* Search icon */
 .search-icon {
   width: 24px;
@@ -1135,6 +1140,14 @@ margin-bottom: 15px;
 .nav-mobile{
   display: none;
 }
+.nav-mobile #search-icon-mobile{
+      background-color: #fab76a57;
+    border-radius: 18px;
+}
+.nav-mobile #ham-burger{
+    background-color: #fab76a57;
+    border-radius: 7px;
+}
 @media (max-width: 550px) {
    .hero-content h1{
      font-size: 40px;
@@ -1180,7 +1193,10 @@ margin-bottom: 15px;
 ;
         align-items: center;
 }
-
+#popup-menu a{
+   text-decoration: unset;
+   color: white;
+}
 .submenu {
   padding-left: 15px;
   margin-top: 10px;
@@ -1264,5 +1280,11 @@ margin-bottom: 15px;
     flex-direction: column;
     align-items: center;
       }
-
+      .about-grid{
+            flex-direction: column;
+           
+      }
+.about-grid div{
+ width:unset !important;
+}
 }

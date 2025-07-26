@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <script src="./js/script.js" defer></script>
 </head>
 
 <body>
@@ -54,14 +55,14 @@
         <ul class="dropdown-menu">
           <ul>
             <li><a href="#">Nattu sugar</a></li>
-            <li><a href="#">Karupatti</a></li>
-            <li><a href="#turmeric">Turmeric</a></li>
+            <li><a href="/product-categories.html#karupatti">Karupatti</a></li>
+            <li><a href="/product-categories.html#turmeric">Turmeric</a></li>
             <li><a href="#">Deepam oil</a></li>
           </ul>
           <ul>
-            <li><a href="#dry-fruits">Dry fruits</a></li>
-            <li><a href="#coconut-oil">Coconut Oil</a></li>
-            <li><a href="#ghee">Ghee</a></li>
+            <li><a href="/dry-fruits.html">Dry fruits</a></li>
+            <li><a href="/product-categories.html#coconut-oil">Coconut Oil</a></li>
+            <li><a href="/product-categories.html#ghee">Ghee</a></li>
             <li><a href="#seeds">Seeds</a></li>
           </ul>
         </ul>
@@ -82,7 +83,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
       <div class="nav-right">
@@ -116,7 +116,7 @@
         </a>
       </div>
       <div class="nav-mobile">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+        <svg id="search-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
           <rect x="0.34" y="0.84" width="33.32" height="33.32" rx="16.66" stroke="white" stroke-opacity="0.47"
             stroke-width="0.68" />
           <path
@@ -131,29 +131,46 @@
           <path d="M16 26.5H33" stroke="white" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
+         <div class="search-container hidden" id="search-container-mobile">
+          <button class="search-icon">
+            <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
+          </button>
+          <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search for " />
+            <div class="placeholder-anim">
+              <div class="placeholder-track">
+                <span> Products</span>
+                <span> Turmeric</span>
+                <span> Ghee</span>
+                <span> Dry Fruits</span>
+                <span> Coconut Oil</span>
+                <span> Products</span> <!-- Duplicate of first for seamless scroll -->
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <!-- Popup Menu -->
     <div id="popup-menu" class="popup hidden">
       <span id="close-popup" class="close-btn">&times;</span>
       <ul>
-        <li>Home</li>
+        <li><a href="/">Home</a></li>
         <li id="all-categories-toggle" class="dropdown-toggle">
           All categories <span id="category-arrow">▲</span>
         </li>
         <ul id="category-submenu" class="submenu hidden">
-          <li>Nattu sugar</li>
-          <li>Karupatti</li>
-          <li>Bulk Meal</li>
-          <li>Tumeric</li>
-          <li>Deepam oil</li>
-          <li>Dry fruits</li>
-          <li>Coconut Oil</li>
-          <li>Ghee</li>
-          <li>Seeds</li>
+          <li><a href="/">Nattu sugar</a></li>
+          <li><a href="/product-categories.html#karupatti">Karupatti</a></li>
+          <li><a href="/">Turmeric</a></li>
+          <li><a href="/">Deepam oil</a></li>
+          <li><a href="/dry-fruits.html">Dry fruits</a></li>
+          <li><a href="/product-categories.html#coconut-oil">Coconut Oil</a></li>
+          <li><a href="/product-categories.html#ghee">Ghee</a></li>
+          <li><a href="/pulses.html">Seeds</a></li>
         </ul>
-        <li>About Us</li>
-        <li>FAQS</li>
-        <li>Contact Us</li>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/faq.html">FAQS</a></li>
+        <li><a href="#connect-section">Contact Us</a></li>
 
       </ul>
       <a href="#" class="shop-btn">
@@ -274,7 +291,7 @@
 
     <div class="product-grid">
       <!-- Product 1 -->
-      <div class="product-card">
+      <div class="product-card" id="groundnut">
         <img src="https://ik.imagekit.io/tyofbrfdr/products/groundnut.png?updatedAt=1753074502563" alt="Groundnut" />
         <div class="product-card-content">
           <div class="product-title">

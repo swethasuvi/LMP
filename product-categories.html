@@ -110,7 +110,7 @@
         </a>
       </div>
       <div class="nav-mobile">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+        <svg id="search-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
           <rect x="0.34" y="0.84" width="33.32" height="33.32" rx="16.66" stroke="white" stroke-opacity="0.47"
             stroke-width="0.68" />
           <path
@@ -125,6 +125,51 @@
           <path d="M16 26.5H33" stroke="white" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
+         <div class="search-container hidden" id="search-container-mobile">
+          <button class="search-icon">
+            <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
+          </button>
+          <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search for " />
+            <div class="placeholder-anim">
+              <div class="placeholder-track">
+                <span> Products</span>
+                <span> Turmeric</span>
+                <span> Ghee</span>
+                <span> Dry Fruits</span>
+                <span> Coconut Oil</span>
+                <span> Products</span> <!-- Duplicate of first for seamless scroll -->
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <!-- Popup Menu -->
+    <div id="popup-menu" class="popup hidden">
+      <span id="close-popup" class="close-btn">&times;</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li id="all-categories-toggle" class="dropdown-toggle">
+          All categories <span id="category-arrow">▲</span>
+        </li>
+        <ul id="category-submenu" class="submenu hidden">
+          <li><a href="/">Nattu sugar</a></li>
+          <li><a href="/product-categories.html#karupatti">Karupatti</a></li>
+          <li><a href="/">Turmeric</a></li>
+          <li><a href="/">Deepam oil</a></li>
+          <li><a href="/dry-fruits.html">Dry fruits</a></li>
+          <li><a href="/product-categories.html#coconut-oil">Coconut Oil</a></li>
+          <li><a href="/product-categories.html#ghee">Ghee</a></li>
+          <li><a href="/pulses.html">Seeds</a></li>
+        </ul>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/faq.html">FAQS</a></li>
+        <li><a href="#connect-section">Contact Us</a></li>
+
+      </ul>
+      <a href="#" class="shop-btn">
+        Shop Now
+      </a>
     </div>
     <!-- WhatsApp Icon -->
     <div class="whatsapp-icon">
@@ -140,7 +185,7 @@
 
       <div class="product-grid">
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" id="coconut-oil">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/coconut-oil.png?updatedAt=1753074320629" alt="Coconut Oil" />
           <div class="product-card-content">
             <div class="product-title">
@@ -155,7 +200,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" id="ghee">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/ghee.png?updatedAt=1753074469914" alt="Ghee" />
           <div class="product-card-content">
             <div class="product-title">
@@ -170,7 +215,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" id="turmeric">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/turmeric.png?updatedAt=1753074575732" alt="Turmeric" />
           <div class="product-card-content">
             <div class="product-title">
@@ -185,7 +230,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" id="karupatti">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/karupatti.png?updatedAt=1753074536974" alt="Karupatti" />
           <div class="product-card-content">
             <div class="product-title">
@@ -200,7 +245,7 @@
         </div>
 
         <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" id="almonds">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/almond.png?updatedAt=1753074364303" alt="Almond" />
           <div class="product-card-content">
             <div class="product-title">
@@ -215,7 +260,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" id="pistachios">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/pistachio.png?updatedAt=1753074562557" alt="Pistachio" />
           <div class="product-card-content">
             <div class="product-title">
@@ -230,7 +275,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" id="cashew-nut">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/cashew.png?updatedAt=1753074351564" alt="Cashew" />
           <div class="product-card-content">
             <div class="product-title">
@@ -245,7 +290,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" id="black-raisins">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/black-raisins.png?updatedAt=1753074445199" alt="Black Raisins" />
           <div class="product-card-content">
             <div class="product-title">
@@ -259,7 +304,7 @@
           </div>
         </div>
         <!-- Product 9 -->
-        <div class="product-card">
+        <div class="product-card" id="cardamom">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/cardamom.png?updatedAt=1753074489248" alt="Cardamom" />
           <div class="product-card-content">
             <div class="product-title">
@@ -274,7 +319,7 @@
         </div>
 
         <!-- Product 10 -->
-        <div class="product-card">
+        <div class="product-card" id="honey">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/honey.png?updatedAt=1753074512419" alt="Honey" />
           <div class="product-card-content">
             <div class="product-title">
@@ -289,7 +334,7 @@
         </div>
 
         <!-- Product 11 -->
-        <div class="product-card">
+        <div class="product-card" id="red-chilli">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/red-chilli.png?updatedAt=1753074562672" alt="Red Chilli" />
           <div class="product-card-content">
             <div class="product-title">
@@ -304,7 +349,7 @@
         </div>
 
         <!-- Product 12 -->
-        <div class="product-card">
+       <div class="product-card" id="finger-millet">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/finger-millet.png?updatedAt=1753074512075" alt="Finger Millet" />
           <div class="product-card-content">
             <div class="product-title">
@@ -319,7 +364,7 @@
         </div>
 
         <!-- Product 5 -->
-        <div class="product-card">
+       <div class="product-card" id="dates">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/dates.png?updatedAt=1753074486177" alt="Dates" />
           <div class="product-card-content">
             <div class="product-title">
@@ -334,7 +379,7 @@
         </div>
 
         <!-- Product 6 -->
-        <div class="product-card">
+        <div class="product-card" id="dry-grape">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/dry-grape.png?updatedAt=1753074479572" alt="Dry Grape" />
           <div class="product-card-content">
             <div class="product-title">
@@ -349,7 +394,7 @@
         </div>
 
         <!-- Product 7 -->
-        <div class="product-card">
+        <div class="product-card" id="figs">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/fig.png?updatedAt=1753074495145" alt="Figs" />
           <div class="product-card-content">
             <div class="product-title">
@@ -364,7 +409,7 @@
         </div>
 
         <!-- Product 8 -->
-        <div class="product-card">
+        <div class="product-card" id="peanuts">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/peanuts.png?updatedAt=1753074562614" alt="Peanuts" />
           <div class="product-card-content">
             <div class="product-title">
@@ -378,7 +423,7 @@
           </div>
         </div>
 
-        <div class="product-card">
+      <div class="product-card" id="walnuts">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/walnuts.png?updatedAt=1753074575958" alt="Walnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -393,7 +438,7 @@
     </div>
 
     <!-- Product 2 -->
-    <div class="product-card">
+    <div class="product-card" id="pecans">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/pecans.png?updatedAt=1753074529251" alt="Pecans" />
       <div class="product-card-content">
         <div class="product-title">
@@ -408,7 +453,7 @@
     </div>
 
     <!-- Product 3 -->
-    <div class="product-card">
+    <div class="product-card" id="chestnuts">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/chestnuts.png?updatedAt=1753074201663" alt="Chestnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -423,7 +468,7 @@
     </div>
 
     <!-- Product 4 -->
-    <div class="product-card">
+    <div class="product-card" id="hazelnuts">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/hazelnuts.png?updatedAt=1753074498283" alt="Hazelnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -438,7 +483,7 @@
     </div>
 
             <!-- Product 5 -->
-        <div class="product-card">
+        <div class="product-card" id="red-cow-peas">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/redcow-peas.png?updatedAt=1753074562861" alt="Red Cow Peas" />
           <div class="product-card-content">
             <div class="product-title">
@@ -453,7 +498,7 @@
         </div>
 
         <!-- Product 6 -->
-        <div class="product-card">
+        <div class="product-card" id="toor-dal">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/toor-dal.png?updatedAt=1753074571486" alt="Toor Dal" />
           <div class="product-card-content">
             <div class="product-title">
@@ -468,7 +513,7 @@
         </div>
 
         <!-- Product 7 -->
-        <div class="product-card">
+        <div class="product-card" id="mothbean">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/mothbean.png?updatedAt=1753074520005" alt="Mothbean" />
           <div class="product-card-content">
             <div class="product-title">
@@ -483,7 +528,7 @@
         </div>
 
         <!-- Product 8 -->
-        <div class="product-card">
+        <div class="product-card" id="sesame">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/sesame.png?updatedAt=1753074562694" alt="Sesame" />
           <div class="product-card-content">
             <div class="product-title">
@@ -498,7 +543,7 @@
         </div>
 
          <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" id="groundnut">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/groundnut.png?updatedAt=1753074502563" alt="Groundnut" />
           <div class="product-card-content">
             <div class="product-title">
@@ -513,7 +558,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+        <div class="product-card" id="black-soybean">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/black-soybean.png?updatedAt=1753074316829" alt="Black Soybean" />
           <div class="product-card-content">
             <div class="product-title">
@@ -528,7 +573,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" id="tamarind">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/tamarind.png?updatedAt=1753074562662" alt="Tamarind" />
           <div class="product-card-content">
             <div class="product-title">
@@ -543,7 +588,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" id="green-gram">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/green-gram.png?updatedAt=1753074497304" alt="Green Gram" />
           <div class="product-card-content">
             <div class="product-title">
@@ -558,7 +603,7 @@
         </div>
 
         <!-- Product 5 -->
-        <div class="product-card">
+       <div class="product-card" id="coconut">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/coconut.png?updatedAt=1753074491387" alt="Coconut" />
           <div class="product-card-content">
             <div class="product-title">
@@ -573,7 +618,7 @@
         </div>
 
         <!-- Product 6 -->
-        <div class="product-card">
+        <div class="product-card" id="dried-fig">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/dried-fig.png?updatedAt=1753074495002" alt="Dried Fig" />
           <div class="product-card-content">
             <div class="product-title">
@@ -588,7 +633,7 @@
         </div>
 
         <!-- Product 7 -->
-        <div class="product-card">
+        <div class="product-card" id="honey-banana">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/banana.png?updatedAt=1753074360617" alt="Honey Banana" />
           <div class="product-card-content">
             <div class="product-title">
@@ -603,7 +648,7 @@
         </div>
 
         <!-- Product 8 -->
-        <div class="product-card">
+        <div class="product-card" id="small-onion">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/onion.png?updatedAt=1753074562659" alt="Small Onion" />
           <div class="product-card-content">
             <div class="product-title">
@@ -617,7 +662,7 @@
           </div>
         </div>
                        <!-- Product 1 -->
-        <div class="product-card">
+        <div class="product-card" id="citron">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/citron.png?updatedAt=1753074460278" alt="Citron" />
           <div class="product-card-content">
             <div class="product-title">
@@ -632,7 +677,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="product-card">
+         <div class="product-card" id="lemon">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/lemon.png?updatedAt=1753074544966" alt="Lemon" />
           <div class="product-card-content">
             <div class="product-title">
@@ -647,7 +692,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="product-card">
+        <div class="product-card" id="broccoli">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/broccoli.png?updatedAt=1753074436253" alt="Broccoli" />
           <div class="product-card-content">
             <div class="product-title">
@@ -662,7 +707,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="product-card">
+        <div class="product-card" id="carrots">
           <img src="https://ik.imagekit.io/tyofbrfdr/products/carrots.png?updatedAt=1753074363856" alt="Carrots" />
           <div class="product-card-content">
             <div class="product-title">
@@ -806,6 +851,32 @@
   </body>
 </html>
 <script>
+  // Show popup menu
+document.getElementById("ham-burger").onclick = function () {
+  document.getElementById("popup-menu").classList.remove("hidden");
+};
+
+// Close popup
+document.getElementById("close-popup").onclick = function () {
+  document.getElementById("popup-menu").classList.add("hidden");
+};
+
+// Toggle All Categories submenu starts
+document.getElementById("all-categories-toggle").onclick = function () {
+  const submenu = document.getElementById("category-submenu");
+  const arrow = document.getElementById("category-arrow");
+
+  submenu.classList.toggle("hidden");
+
+  // Change arrow direction
+  if (submenu.classList.contains("hidden")) {
+    arrow.innerHTML = "▲";
+  } else {
+    arrow.textContent = "▼";
+  }
+};
+// Toggle All Categories submenu ends
+
     document.addEventListener("DOMContentLoaded", function () {
     const searchIcons = document.querySelectorAll(".search-icon");
     const navLinks = document.querySelector(".nav-links");
@@ -866,4 +937,44 @@
       }
     });
   });
+
+  
+// Show search mobile menu
+document.getElementById("search-icon-mobile").onclick = function (event) {
+  event.stopPropagation(); // Prevents the click from bubbling up
+  const searchContainer = document.getElementById("search-container-mobile");
+  const elementOne = document.querySelector('.nav-left');
+  const elementTwo = document.querySelector('.nav-mobile');
+
+  // Show search container
+  searchContainer.classList.remove("hidden");
+
+  // Hide other nav elements
+  if (elementOne) elementOne.style.display = 'none';
+  if (elementTwo) elementTwo.style.display = 'none';
+
+  // Add outside click listener
+  document.addEventListener('click', handleOutsideClick);
+};
+
+function handleOutsideClick(event) {
+  const searchContainer = document.getElementById("search-container-mobile");
+  const searchIcon = document.getElementById("search-icon-mobile");
+
+  // If click is outside the container and not on the icon
+  if (!searchContainer.contains(event.target) && event.target !== searchIcon) {
+    // Hide the container again
+    searchContainer.classList.add("hidden");
+
+    // Show previously hidden elements again
+    const elementOne = document.querySelector('.nav-left');
+    const elementTwo = document.querySelector('.nav-mobile');
+    if (elementOne) elementOne.style.display = '';
+    if (elementTwo) elementTwo.style.display = '';
+
+    // Remove the click listener to avoid memory leaks
+    document.removeEventListener('click', handleOutsideClick);
+  }
+}
+// mobile search ends
 </script>

@@ -110,7 +110,7 @@
         </a>
       </div>
       <div class="nav-mobile">
-        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
+        <svg id="search-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="34" height="35" viewBox="0 0 34 35" fill="none">
           <rect x="0.34" y="0.84" width="33.32" height="33.32" rx="16.66" stroke="white" stroke-opacity="0.47"
             stroke-width="0.68" />
           <path
@@ -125,6 +125,51 @@
           <path d="M16 26.5H33" stroke="white" stroke-width="2" stroke-linecap="round" />
         </svg>
       </div>
+         <div class="search-container hidden" id="search-container-mobile">
+          <button class="search-icon">
+            <img src="https://ik.imagekit.io/tyofbrfdr/search-icon.png?updatedAt=1753039579763" alt="Search Icon" />
+          </button>
+          <div class="search-wrapper">
+            <input type="text" class="search-input" placeholder="Search for " />
+            <div class="placeholder-anim">
+              <div class="placeholder-track">
+                <span> Products</span>
+                <span> Turmeric</span>
+                <span> Ghee</span>
+                <span> Dry Fruits</span>
+                <span> Coconut Oil</span>
+                <span> Products</span> <!-- Duplicate of first for seamless scroll -->
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        <!-- Popup Menu -->
+    <div id="popup-menu" class="popup hidden">
+      <span id="close-popup" class="close-btn">&times;</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li id="all-categories-toggle" class="dropdown-toggle">
+          All categories <span id="category-arrow">▲</span>
+        </li>
+        <ul id="category-submenu" class="submenu hidden">
+          <li><a href="/">Nattu sugar</a></li>
+          <li><a href="/product-categories.html#karupatti">Karupatti</a></li>
+          <li><a href="/">Turmeric</a></li>
+          <li><a href="/">Deepam oil</a></li>
+          <li><a href="/dry-fruits.html">Dry fruits</a></li>
+          <li><a href="/product-categories.html#coconut-oil">Coconut Oil</a></li>
+          <li><a href="/product-categories.html#ghee">Ghee</a></li>
+          <li><a href="/pulses.html">Seeds</a></li>
+        </ul>
+        <li><a href="/about-us.html">About Us</a></li>
+        <li><a href="/faq.html">FAQS</a></li>
+        <li><a href="#connect-section">Contact Us</a></li>
+
+      </ul>
+      <a href="#" class="shop-btn">
+        Shop Now
+      </a>
     </div>
           <!-- WhatsApp Icon -->
     <div class="whatsapp-icon">
@@ -393,6 +438,32 @@
 </html>
 
 <script>
+  // Show popup menu
+document.getElementById("ham-burger").onclick = function () {
+  document.getElementById("popup-menu").classList.remove("hidden");
+};
+
+// Close popup
+document.getElementById("close-popup").onclick = function () {
+  document.getElementById("popup-menu").classList.add("hidden");
+};
+
+// Toggle All Categories submenu starts
+document.getElementById("all-categories-toggle").onclick = function () {
+  const submenu = document.getElementById("category-submenu");
+  const arrow = document.getElementById("category-arrow");
+
+  submenu.classList.toggle("hidden");
+
+  // Change arrow direction
+  if (submenu.classList.contains("hidden")) {
+    arrow.innerHTML = "▲";
+  } else {
+    arrow.textContent = "▼";
+  }
+};
+// Toggle All Categories submenu ends
+
     document.addEventListener("DOMContentLoaded", function () {
     const searchIcons = document.querySelectorAll(".search-icon");
     const navLinks = document.querySelector(".nav-links");
@@ -453,4 +524,44 @@
       }
     });
   });
+
+  
+// Show search mobile menu
+document.getElementById("search-icon-mobile").onclick = function (event) {
+  event.stopPropagation(); // Prevents the click from bubbling up
+  const searchContainer = document.getElementById("search-container-mobile");
+  const elementOne = document.querySelector('.nav-left');
+  const elementTwo = document.querySelector('.nav-mobile');
+
+  // Show search container
+  searchContainer.classList.remove("hidden");
+
+  // Hide other nav elements
+  if (elementOne) elementOne.style.display = 'none';
+  if (elementTwo) elementTwo.style.display = 'none';
+
+  // Add outside click listener
+  document.addEventListener('click', handleOutsideClick);
+};
+
+function handleOutsideClick(event) {
+  const searchContainer = document.getElementById("search-container-mobile");
+  const searchIcon = document.getElementById("search-icon-mobile");
+
+  // If click is outside the container and not on the icon
+  if (!searchContainer.contains(event.target) && event.target !== searchIcon) {
+    // Hide the container again
+    searchContainer.classList.add("hidden");
+
+    // Show previously hidden elements again
+    const elementOne = document.querySelector('.nav-left');
+    const elementTwo = document.querySelector('.nav-mobile');
+    if (elementOne) elementOne.style.display = '';
+    if (elementTwo) elementTwo.style.display = '';
+
+    // Remove the click listener to avoid memory leaks
+    document.removeEventListener('click', handleOutsideClick);
+  }
+}
+// mobile search ends
 </script>
