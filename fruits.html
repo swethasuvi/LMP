@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pure Agriculture Products</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <div class="parent-container">
@@ -392,3 +391,66 @@
     </div>
   </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const searchIcons = document.querySelectorAll(".search-icon");
+    const navLinks = document.querySelector(".nav-links");
+    const searchContainer = document.querySelector(".search-container");
+
+    // Show search container on icon click
+    searchIcons.forEach(icon => {
+      icon.addEventListener("click", (event) => {
+        event.stopPropagation(); // Prevent triggering document click
+        navLinks.style.display = "none";
+        searchContainer.style.display = "flex"; // or block, depending on your layout
+      });
+    });
+
+    // Hide search container when clicking outside of it
+    document.addEventListener("click", function (event) {
+      const isClickInside = searchContainer.contains(event.target);
+
+      if (!isClickInside) {
+        searchContainer.style.display = "none";
+        navLinks.style.display = "flex"; // or block
+      }
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const dropdownTrigger = document.querySelector(".dropdown");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+
+    let isMenuOpen = false;
+
+    // // Show on hover
+    // dropdownTrigger.addEventListener("mouseenter", () => {
+    //   dropdownMenu.style.display = "flex";
+    //   isMenuOpen = true;
+    // });
+
+    // dropdownTrigger.addEventListener("mouseleave", () => {
+    //   setTimeout(() => {
+    //     if (!isMenuOpen) {
+    //       dropdownMenu.style.display = "none";
+    //     }
+    //   }, 200);
+    // });
+
+    // Show on click
+    dropdownTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      isMenuOpen = !isMenuOpen;
+      dropdownMenu.style.display = isMenuOpen ? "flex" : "none";
+    });
+
+    // Hide when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!dropdownTrigger.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.style.display = "none";
+        isMenuOpen = false;
+      }
+    });
+  });
+</script>
