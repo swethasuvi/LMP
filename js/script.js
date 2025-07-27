@@ -256,3 +256,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // search query ends
+
+// mobile search query starts
+document.addEventListener('DOMContentLoaded', function () {
+    const searchContainer = document.getElementById('search-container-mobile');
+    const searchButton = searchContainer.querySelector('.search-icon');
+    const searchInput = searchContainer.querySelector('.search-input');
+  const validIds = [
+    "groundnut",
+    "black-soybean",
+    "tamarind",
+    "green-gram",
+    "red-cow-peas",
+    "toor-dal",
+    "mothbean",
+    "sesame",
+    "almonds",
+    "pistachios",
+    "cashew-nut",
+    "black-raisins",
+    "dates",
+    "dry-grape",
+    "figs",
+    "peanuts",
+    "citron",
+    "lemon",
+    "broccoli",
+    "carrots",
+    "coconut",
+    "dried-fig",
+    "honey-banana",
+    "small-onion",
+    "coconut-oil",
+    "ghee",
+    "turmeric",
+    "karupatti",
+    "cardamom",
+    "honey",
+    "red-chilli",
+    "finger-millet",
+    "walnuts",
+    "pecans",
+    "chestnuts",
+    "hazelnuts",
+  ];
+    searchButton.addEventListener('click', function () {
+      const inputValue = searchInput.value; // Get input value and trim spaces
+     const userInput = inputValue
+          .trim()
+          .toLowerCase()
+          .replace(/\s+/g, "-");
+ 
+        if (validIds.includes(userInput)) {
+          window.location.href = `/product-categories.html#${userInput}`;
+        }
+    });
+});
+// mobile search query ends
