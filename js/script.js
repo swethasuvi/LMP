@@ -235,6 +235,10 @@ document.addEventListener("DOMContentLoaded", function () {
     "pecans",
     "chestnuts",
     "hazelnuts",
+    "brown-sugar",
+    "round-jaggery",
+    "jaggery-cube",
+    "liquid-jaggery"
   ];
 
   if (searchInput) {
@@ -299,6 +303,10 @@ document.addEventListener('DOMContentLoaded', function () {
     "pecans",
     "chestnuts",
     "hazelnuts",
+    "brown-sugar",
+    "round-jaggery",
+    "jaggery-cube",
+    "liquid-jaggery"
   ];
     searchButton.addEventListener('click', function () {
       const inputValue = searchInput.value; // Get input value and trim spaces
