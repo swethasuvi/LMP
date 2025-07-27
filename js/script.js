@@ -138,6 +138,17 @@ document.getElementById("close-popup").onclick = function () {
   document.getElementById("popup-menu").classList.add("hidden");
 };
 
+  document.querySelectorAll("#popup-menu a").forEach(anchor => {
+    anchor.addEventListener("click", () => {
+     document.getElementById("popup-menu").classList.add("hidden");
+    });
+  });
+  document.querySelectorAll("#popup-menu a").forEach(anchor => {
+    anchor.addEventListener("click", () => {
+     document.getElementById("popup-menu").classList.add("hidden");
+    });
+  });
+
 // Show search mobile menu
 document.getElementById("search-icon-mobile").onclick = function (event) {
   event.stopPropagation(); // Prevents the click from bubbling up

@@ -517,7 +517,12 @@ document.getElementById("ham-burger").onclick = function () {
 document.getElementById("close-popup").onclick = function () {
   document.getElementById("popup-menu").classList.add("hidden");
 };
-// Toggle All Categories submenu starts
+
+  document.querySelectorAll("#popup-menu a").forEach(anchor => {
+    anchor.addEventListener("click", () => {
+     document.getElementById("popup-menu").classList.add("hidden");
+    });
+  });// Toggle All Categories submenu starts
 document.getElementById("all-categories-toggle").onclick = function () {
   const submenu = document.getElementById("category-submenu");
   const arrow = document.getElementById("category-arrow");
