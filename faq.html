@@ -381,6 +381,21 @@
   </body>
 </html>
 <script>
+// accordian logic starts
+  const headers = document.querySelectorAll(".accordion-header");
+
+
+  headers.forEach((header) => {
+  header.addEventListener("click", () => {
+    
+    header.classList.toggle("active");
+    const body = header.nextElementSibling;
+    body.classList.toggle("open");
+  });
+});
+
+// accordian logic ends
+
   // search query starts
 document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".search-input");
