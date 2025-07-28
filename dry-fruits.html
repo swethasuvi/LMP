@@ -305,7 +305,7 @@
           </div>
         </div>
 
-                <div class="product-card">
+    <!-- <div class="product-card">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/walnuts.png?updatedAt=1753074575958" alt="Walnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -317,10 +317,10 @@
             <p class="price">₹420</p>
         <a href="tel:9962116570"><span>Buy Now</span></a>
       </div>
-    </div>
+    </div> -->
 
     <!-- Product 2 -->
-    <div class="product-card">
+    <!-- <div class="product-card">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/pecans.png?updatedAt=1753074529251" alt="Pecans" />
       <div class="product-card-content">
         <div class="product-title">
@@ -332,10 +332,10 @@
             <p class="price">₹549</p>
         <a href="tel:9962116570"><span>Buy Now</span></a>
       </div>
-    </div>
+    </div> -->
 
     <!-- Product 3 -->
-    <div class="product-card">
+    <!-- <div class="product-card">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/chestnuts.png?updatedAt=1753074201663" alt="Chestnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -347,10 +347,10 @@
             <p class="price">₹298</p>
         <a href="tel:9962116570"><span>Buy Now</span></a>
       </div>
-    </div>
+    </div> -->
 
     <!-- Product 4 -->
-    <div class="product-card">
+    <!-- <div class="product-card">
       <img src="https://ik.imagekit.io/tyofbrfdr/products/hazelnuts.png?updatedAt=1753074498283" alt="Hazelnuts" />
       <div class="product-card-content">
         <div class="product-title">
@@ -362,7 +362,7 @@
             <p class="price">₹198</p>
         <a href="tel:9962116570"><span>Buy Now</span></a>
       </div>
-    </div>
+    </div> -->
       </div>
     </section>
     <!-- Connect With Us Section -->
@@ -755,3 +755,46 @@ function handleOutsideClick(event) {
 }
 // mobile search ends
 </script>
+
+  <script>
+    function sendToMyself() {
+       event.preventDefault(); 
+        const userEmail = document.getElementById("email").value; 
+      const apiKey = "2BCD7E8672953F752B51AB705116F5BFAA0ECE4CDB9D4ED156164F9A8E833F30A967C4FB4B8A79CB7599C029D9E023E2"; // 🔐 Replace with your Elastic Email API key
+      const myEmail = "lmpnaturalproducts.info@gmail.com";  // 📥 Replace with your verified sender and recipient email
+
+      const payload = {
+        "Recipients": [
+  { "Email": "lmpnaturalproducts.info@gmail.com" }
+],
+        Content: {
+          From: myEmail,
+          Subject: "LMP Contact form submission",
+          Body: [
+            {
+              ContentType: "HTML",
+              Content: `<h4>Form submission data</h4><p><strong>Customer email</strong>: ${userEmail}</p>`
+            }
+          ]
+        }
+      };
+
+      fetch("https://api.elasticemail.com/v4/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-ElasticEmail-ApiKey": apiKey
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("Email sent:", data);
+        
+      })
+      .catch(error => {
+        console.error("Error:", error);
+    
+      });
+    }
+  </script>
