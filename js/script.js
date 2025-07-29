@@ -250,7 +250,13 @@ document.addEventListener("DOMContentLoaded", function () {
     "brown-sugar",
     "round-jaggery",
     "jaggery-cube",
-    "liquid-jaggery"
+    "liquid-jaggery",
+    "black-gram",
+    "sesame-oil",
+    "peanut-oil",
+    "black-gram",
+    "sesame-oil",
+    "peanut-oil"
   ];
 
   if (searchInput) {
@@ -318,7 +324,10 @@ document.addEventListener('DOMContentLoaded', function () {
     "brown-sugar",
     "round-jaggery",
     "jaggery-cube",
-    "liquid-jaggery"
+    "liquid-jaggery",
+    "black-gram",
+    "sesame-oil",
+    "peanut-oil"
   ];
     searchButton.addEventListener('click', function () {
       const inputValue = searchInput.value; // Get input value and trim spaces
