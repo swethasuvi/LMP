@@ -626,7 +626,7 @@ display: flex;
    justify-content: space-between;
     text-align: left;
     width: 100%;
-    min-height:50px
+    min-height:68px
 }
 .product-card h3 {
   font-size: 18px;
